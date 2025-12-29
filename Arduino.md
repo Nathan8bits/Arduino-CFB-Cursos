@@ -1,6 +1,6 @@
 # Aula 1: Introdução
 
-![[arduino2.jpg]]
+![[./imagens/arduino2.jpg]]
 
 site Tinkercad para desenvolvimento web.
 
@@ -19,7 +19,7 @@ programa Arduino para desenvolver e mover códigos para a placa arduino.
 * **digitalWrite()**: valor de saída para determinado pino;
 * **delay()**: espera em milisegundos;
 
-```cpp title:primeirosPassos.cpp
+```cpp
 void setup() {
   pinMode(13, OUTPUT); //numero da porta e se é entrada ou saida(INPUT/OUTPUT)
 }
@@ -54,13 +54,13 @@ void loop() {
 ## Leds
 
 * <mark style="background: #BBFABBA6;">Leds têm polaridade</mark>, ânodo (positivo, maior) e catodo(negativo, menor):
-![[led.jpg]]
+![[./imagens/led.jpg]]
 
 
 
 ### Montagem do circuito com led:
 
-![[montagemLed.jpg]]
+![[./imagens/montagemLed.jpg]]
 
 **obs**: resistores não têm polaridade, podendo ser conectado em qualquer polo do led.
 
@@ -159,25 +159,25 @@ void loop()
 # Aula 6: Lendo portas digitais, digitalRead, pushButtom
 
 ## PushButtom
-![[pushbuttom.jpg]]
+![[./imagens/pushbuttom.jpg]]
 
 
 ### Circuitos com o pushButtom
 
-![[circuitoPushButtom.jpg]]
+![[./imagens/circuitoPushButtom.jpg]]
 
-![[circuitoLedWithPushButtom.jpg]]
+![[./imagens/circuitoLedWithPushButtom.jpg]]
 obs: esse buttom está com resistor em pull down
 
 # Aula 7: Resistor Pull Down, Resistor Pull Up
 
 ## Resistor em Pull Down
-![[resistorPullDown.jpg]]
+![[./imagens/resistorPullDown.jpg]]
     Enquanto estiver pressionado manda 5V para a entrada do Arduino.
 Sem um resistor conectado ao negativo não será possível saber quando o botão for liberado, pois ele não estará recebendo 0V, na verdade estará recebendo um valor nulo.
 
 ## Resistor em Pull Up
-![[pullDownEPullUp.jpg]]
+![[./imagens/pullDownEPullUp.jpg]]
     Em Pull Up ocorre o contrário, enquanto estiver pressionado envia 0v.
 
 # Aula 8: Led RGB, Módulo Led RGB
@@ -187,7 +187,7 @@ Sem um resistor conectado ao negativo não será possível saber quando o botão
 
 ## Led RGB
 
-![[ledRGB.jpg]]
+![[./imagens/ledRGB.jpg]]
      O led RGB tem um pino para cada cor e um para o GND (negativo).
 
 Defina cada pino de cor como OUTPUT e use o analogWrite ou digitalWrite para passar o valor da intensidade.  A combinação desses valores gera as demais cores.
@@ -244,16 +244,16 @@ class Cor{
 
   O arduino possui portas de entrada analógicas.
 
-![[ondasAnalogicasEDigitais.jpg]]
+![[./imagens/ondasAnalogicasEDigitais.jpg]]
 
 * **Onda analógica**: varia entre 0V e 5v, entre 0 e 1023. Seguindo a seguinte conversão:
-*![[conversaoPraVoltsEntradaAnalogica.jpg]]
+![[./imagens/conversaoPraVoltsEntradaAnalogica.jpg]]
 * **Onda Digital**: 0 ou 1, 0V ou 5V;
 
 **Obs**: *Portas PWM são entradas digitais que simulam portas analógicas alterando o comprimento da onda quadrada*. Variam entre 0 e 255 (0V a 5V).
 
 Exemplo com leitura de potenciômetro:
-![[lendoUmPotenciometro.jpg]]
+![[./imagens/lendoUmPotenciometro.jpg]]
 
 ```cpp
 #define an5 A5
@@ -281,7 +281,7 @@ Seus parâmetros:
 * map(valor, min_entrada, max_entrada, min_saida, max_saida)
 
 ## Exemplo 1: led e potenciômetro
-![[aula11circuito1.jpg]]
+![[./imagens/aula11circuito1.jpg]]
 
 ```cpp
 #define led 3
